@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ikaslea xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="ikasleak01.xsd">
+    <nan>11111111</nan>
+    <izena>Iraide Etxeberria</izena>
+    <helbidea>
+        <kalea>Kale nagusia</kalea>
+        <zbk>5</zbk>
+        <herria>Bilbao</herria>
+        <probintzia>Bizkaia</probintzia>
+    </helbidea>
+    <telefonoa>944000000</telefonoa>
+</ikaslea>
