@@ -1,0 +1,96 @@
+﻿##########################################################
+/enpresa/departamentuak/departamentua[izena="Giza Baliabideak"]/@idDep
+----------------------------------------------------------------------------------------------------------------------------------------
+ idDep="DGB"
+ ##########################################################
+ /enpresa/langileak/langilea/izena/text()
+ Joseba
+Aitor
+Ane
+Maite
+Jon
+Iker
+Eneko
+Miren
+Mikel
+Oier
+Leire
+Eider
+Andoni
+Ekaitz
+Eduardo
+Iraitz
+##########################################################
+/enpresa/langileak/langilea[departamentu_id="DGB"]/izena/text()
+----------------------------------------------------------------------------------------------------------------------------------------
+Ane
+##########################################################
+/enpresa/langileak/langilea[departamentu_id=/enpresa/departamentuak/departamentua[izena="Giza Baliabideak"]/@idDep]/izena/text()
+----------------------------------------------------------------------------------------------------------------------------------------
+Ane
+##########################################################
+/enpresa/langileak/langilea[soldata < 3000]/izena/text()
+----------------------------------------------------------------------------------------------------------------------------------------
+Joseba
+Ane
+Maite
+Jon
+Leire
+Andoni
+##########################################################
+/enpresa/langileak/langilea[last()]
+----------------------------------------------------------------------------------------------------------------------------------------
+<langilea idLang="16">
+  <izena>Iraitz</izena>
+  <abizena1>Corcuera</abizena1>
+  <abizena2>Diaz</abizena2>
+  <nan>43543954D</nan>
+  <jaiotze_data>1971-05-09</jaiotze_data>
+  <bizilekua>
+    <kalea mota="bidea">Lehendakari Agirre</kalea>
+    <zbk>15</zbk>
+    <herria postakodea="48900">Barakaldo</herria>
+    <probintzia>Bizkaia</probintzia>
+  </bizilekua>
+  <telefonoak>
+    <mugikorra>645876543</mugikorra>
+  </telefonoak>
+  <epostak>
+    <eposta_pertsonala>iraitz.corcuera@gmail.com</eposta_pertsonala>
+    <eposta_lana>iraitz.corcuera@mimi.eus</eposta_lana>
+  </epostak>
+  <argazkia>../../irudiak/langileak/iraitzcorcuera.png</argazkia>
+  <soldata>3200</soldata>
+  <kontratazio_data>2022-05-17</kontratazio_data>
+  <ardura_id>EA</ardura_id>
+  <departamentu_id>DFI</departamentu_id>
+</langilea>
+##########################################################
+/enpresa/langileak/langilea[last()-1]
+----------------------------------------------------------------------------------------------------------------------------------------
+<langilea idLang="15">
+  <izena>Eduardo</izena>
+  <abizena1>Garcia</abizena1>
+  <abizena2>Alvarez</abizena2>
+  <nan>87654321B</nan>
+  <jaiotze_data>1988-05-15</jaiotze_data>
+  <bizilekua>
+    <kalea mota="bidea">Lehendakari Agirre</kalea>
+    <zbk>15</zbk>
+    <herria postakodea="48902">Barakaldo</herria>
+    <probintzia>Bizkaia</probintzia>
+  </bizilekua>
+  <telefonoak>
+    <mugikorra>645876543</mugikorra>
+  </telefonoak>
+  <epostak>
+    <eposta_pertsonala>eduardo.garcia@gmail.com</eposta_pertsonala>
+    <eposta_lana>eduardo.alvarez@mimi.eus</eposta_lana>
+  </epostak>
+  <argazkia>../../irudiak/langileak/eduardogarcia.png</argazkia>
+  <soldata>3100</soldata>
+  <kontratazio_data>2024-01-20</kontratazio_data>
+  <ardura_id>EZ</ardura_id>
+  <departamentu_id>DIT</departamentu_id>
+</langilea>
+##########################################################

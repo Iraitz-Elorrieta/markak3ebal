@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<faktura xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="876" xsi:noNamespaceSchemaLocation="faktura.xsd">
+  <f_data>2022-02-28T08:25:02</f_data>
+  <saltzailea id="12">
+    <izena>June Arriaga Zarate</izena>    
+    <nan>12345678A</nan>
+  </saltzailea>
+  <bezeroa id="9878">
+    <izena>Leire Bengoetxea Zallo</izena>
+    <helbidea>
+      <kalea>Kale Nagusia, 8, 2 - A</kalea>
+      <kp>48300</kp>
+      <herria>Gernika</herria>
+      <probintzia>Bizkaia</probintzia>
+    </helbidea>
+    <telefonoa num="666111666"/>
+    <telefonoa num="954666111"/>
+  </bezeroa>
+  <artikulua id="121" bez="21">
+    <deskribapena>Aulki birakaria, C-121 modeloa</deskribapena>
+    <prezioa>98.23</prezioa>
+    <kantitatea>1</kantitatea>
+  </artikulua>
+  <artikulua id="9341" bez="21">
+    <deskribapena>120x80 estudioko pago mahaia, A2-456-X modeloa</deskribapena>
+    <prezioa>193.23</prezioa>
+    <kantitatea>1</kantitatea>
+  </artikulua>
+  <artikulua id="1124" bez="21">
+    <deskribapena>Pantaila laranjako mahaiko lanpara, AK-987 modeloa</deskribapena>
+    <prezioa>23.12</prezioa>
+    <kantitatea>2</kantitatea>    
+  </artikulua>
+  <deskontua>20</deskontua>
+</faktura>
