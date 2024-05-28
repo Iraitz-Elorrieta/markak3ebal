@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<doc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="fligths.xsd">
+  <Airport airId="LHR">
+      <name>London Heathrow</name>
+      <tax>100</tax>
+  </Airport>
+  <Airport airId="ZRH">
+      <name>Zurich</name>
+      <tax>150</tax>
+  </Airport>
+  <Flight flightId="LX123">
+      <seats>100</seats>
+      <date>2005-08-09</date>
+      <source>LHR</source>
+      <destination>ZRH</destination>
+  </Flight>
+  <Passenger>
+      <name>Student</name>
+      <passportnumber>123456</passportnumber>
+      <address>Univstr. 6</address>
+  </Passenger>
+  <Reservation>
+      <flightRef>LX123</flightRef>
+      <passRef>123456</passRef>
+      <creditCard>1234 5678</creditCard>
+  </Reservation>
+</doc>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- Passenger Element -->
+<xs:element name="Passenger">
+    <xs:complexType>
+        <xs:sequence>
+              <xs:element name="name" type="xs:string"/>
+              <xs:element name="passportnumber" type="xs:string"/>
+              <xs:element name="address" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+<!-- Flight Element -->
+<xs:element name="Flight">
+    <xs:complexType>
+        <xs:sequence>
+              <xs:element name="seats">
+                  <xs:simpleType>
+                      <xs:restriction base="xs:int">
+                          <xs:minExclusive value="30"/>
+                          <xs:maxInclusive value="1000"/>
+                      </xs:restriction>
+                  </xs:simpleType>
+              </xs:element>
+              <xs:element name="date" type="xs:date"/>
+              <xs:element name="source" type="xs:string"/>
+              <xs:element name="destination" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="flightId">
+            <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                      <xs:minLength value="0"/>
+                      <xs:maxLength value="5"/>
+                  </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+</xs:element>
+<!-- Airport Element -->
+<xs:element name="Airport">
+    <xs:complexType>
+          <xs:sequence>
+              <xs:element name="name" type="xs:string"/>
+              <xs:element name="tax" type="xs:float"/>
+          </xs:sequence>
+          <xs:attribute name="airId">
+              <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                      <xs:minLength value="0"/>
+                      <xs:maxLength value="3"/>
+                  </xs:restriction>
+              </xs:simpleType>
+          </xs:attribute>
+    </xs:complexType>
+</xs:element>
+<!-- Reservation-->
+<xs:element name="Reservation">
+      <xs:complexType>
+        <xs:sequence>
+            <xs:element name="flightRef" type="xs:string"/>
+            <xs:element name="passRef" type="xs:string"/>
+            <xs:element name="creditCard" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+</xs:element>
+<!-- Root element-->
+<xs:element name="doc">
+    <xs:complexType>
+        <xs:sequence>
+              <xs:element ref="Airport" minOccurs="2" maxOccurs="unbounded" />
+              <xs:element ref="Flight" minOccurs="1" maxOccurs="unbounded" />
+              <xs:element ref="Passenger" minOccurs="1" maxOccurs="unbounded" />
+              <xs:element ref="Reservation" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+</xs:schema>
