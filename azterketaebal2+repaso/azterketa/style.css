@@ -1,0 +1,18 @@
+*{	box-sizing:border-box;
+    font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+}
+header {
+  background-color: #ff6600;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+footer {
+  background-color: #ff6600;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+.gorria {
+color: red;
+}

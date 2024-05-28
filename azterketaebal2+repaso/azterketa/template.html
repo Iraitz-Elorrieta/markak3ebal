@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <title>Elorrieta Pizzak</title>
+    <meta charset="UTF-8">
+    <meta content="author" content="Iraitz-Corcuera">
+    <meta content="keywords" content="bidaia Saturno Trans Planet">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function calcularPrezioa() {
+            // Pizzak eta haien kopuruen datuak lortu
+            var margaritaKopurua = parseInt(document.getElementById("margaritazenbakia").value);
+            var begetarianoKopurua = parseInt(document.getElementById("begetarianoazenbakia").value);
+            var gaztaiKopurua = parseInt(document.getElementById("gaztaizenbakia").value);
+            var pernilaGaztaiKopurua = parseInt(document.getElementById("PernilaetaGaztaiagehigarriakzenbakia").value);
+
+            // Prezio totala kalkulatu
+            var totala = (margaritaKopurua * 9.9) +
+                        (begetarianoKopurua * 12.4) +
+                        (gaztaiKopurua * 12.4) +
+                        (pernilaGaztaiKopurua * 12.4);
+
+            // Entrega kostua gehitu aukeratuta badago
+            if (document.getElementById("entregatzeko").checked) {
+                totala += 4.6;
+            }
+
+            return totala.toFixed(2);
+        }
+
+        function eskariaBurutu() {
+            // Bezeroaren datuak lortu
+            var izena = document.getElementById("izena").value;
+            var abizena = document.getElementById("abizena").value;
+            var helbidea = document.getElementById("helbidea").value;
+            var telefonoa = document.getElementById("tel").value;
+
+            // Pizzak eta haien kopuruen datuak lortu
+            var margaritaKopurua = parseInt(document.getElementById("margaritazenbakia").value);
+            var begetarianoKopurua = parseInt(document.getElementById("begetarianoazenbakia").value);
+            var gaztaiKopurua = parseInt(document.getElementById("gaztaizenbakia").value);
+            var pernilaGaztaiKopurua = parseInt(document.getElementById("PernilaetaGaztaiagehigarriakzenbakia").value);
+
+            // Pizzak eta haien gehigarrien datuak lortu
+            var margaritaGehigarriak = document.getElementById("margaritagehigarriak").options[document.getElementById("margaritagehigarriak").selectedIndex].text;
+            var begetarianoGehigarriak = document.getElementById("begetarianoagehigarriak").options[document.getElementById("begetarianoagehigarriak").selectedIndex].text;
+            var gaztaiGehigarriak = document.getElementById("gaztaigehigarriak").options[document.getElementById("gaztaigehigarriak").selectedIndex].text;
+            var pernilaGaztaiGehigarriak = document.getElementById("PernilaetaGaztaiagehigarriak").options[document.getElementById("PernilaetaGaztaiagehigarriak").selectedIndex].text;
+
+            // Bezeroaren informazioa
+            var bezeroa = izena + " " + abizena + ", " + helbidea + ", " + telefonoa;
+
+            // Eskaria
+            var eskaria = "";
+            if (margaritaKopurua > 0) {
+                eskaria += margaritaKopurua + " Pizza Margarita (" + margaritaGehigarriak + "), ";
+            }
+            if (begetarianoKopurua > 0) {
+                eskaria += begetarianoKopurua + " Pizza Begetarianoa (" + begetarianoGehigarriak + "), ";
+            }
+            if (gaztaiKopurua > 0) {
+                eskaria += gaztaiKopurua + " Pizza 4 Gaztai (" + gaztaiGehigarriak + "), ";
+            }
+            if (pernilaGaztaiKopurua > 0) {
+                eskaria += pernilaGaztaiKopurua + " Pizza Pernila eta Gaztaia (" + pernilaGaztaiGehigarriak + "), ";
+            }
+
+            // Eskariaren azkeneko hutsa kendu
+            eskaria = eskaria.substring(0, eskaria.length - 2);
+
+            // Prezio totala kalkulatu
+            var totala = calcularPrezioa();
+            // IVA gehitu
+            var totalaIVA = (totala * 1.1).toFixed(2);
+
+            // Taulan datuak gehitu
+            var table = document.getElementById("taulaeskaerak");
+            var newRow = table.insertRow(-1);
+            var cells = [
+                bezeroa,
+                eskaria,
+                totala + "€",
+                totalaIVA + "€"
+            ];
+            for (var i = 0; i < cells.length; i++) {
+                var cell = newRow.insertCell(i);
+                cell.textContent = cells[i];
+            }
+        }
+    </script>
+</head>
+<body>
+    <header><h1>Pizza eskaera orria</h1></header>
+    <fieldset>
+        <legend><b>Kontaktu Datuak:</b></legend>
+        <label for="izena">Izena<b><span class="gorria">*</span></b></label>
+        <input type="text" name="izena" id="izena" pattern="{1,40}" required>
+        <label for="abizena">Abizena<b><span class="gorria">*</span></b></label>
+        <input type="text" name="abizena" id="abizena" required>
+        <br><br>
+        <label for="emaila">e-Posta<b><span class="gorria">*</span></b></label>
+        <input type="email" name="emaila" id="emaila" required>
+        <label for="telefonoa">Telefonoa<b><span class="gorria">*</span></b></label>
+        <input type="tel" name="tel" id="tel" pattern="[0-9]{9}" required>
+        <br>
+        <br>
+        <label for="helbidea">Helbidea<b><span class="gorria">*</span></b></label>
+        <input type="address" name="helbidea" id="helbidea" required>
+        <label for="postakodea">PK<b><span class="gorria">*</span></b></label>
+        <select id="postakodea" name="postakodea" required>
+            <option value="48001">48001 
+            <option value="48002">48002
+            <option value="48003">48003
+            <option value="48004">48004 
+            <option value="48005">48005
+            <option value="48006">48006
+            <option value="48007">48007 
+            <option value="48008">48008
+            <option value="48009">48009
+            <option value="48010">48010
+            <option value="48011">48011
+            <option value="48012">48012
+            <option value="48013">48013
+            <option value="48014">48014
+            <option value="48015">48015
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend><b>Aukeratu Pizzak:</b></legend>
+        <p>1. Pizza margarita: Tomate eta mozzarella. Prezioa: 9.9€</p>
+        <label for="margaritagehigarriak">Gehigarriak</label>
+        <select id="margaritagehigarriak" name="margaritagehigarriak">
+            <option value="0">Ez 
+            <option value="0.8">Gaztaia
+            <option value="0.8">Albahaka
+            <option value="1.4">Gaztaia eta albahaka
+        </select>
+        <label for="margaritazenbakia">Kantitatea:</label>
+        <input type="number" name="margaritazenbakia" id="margaritazenbakia" value="1">
+        <p>2. Pizza begetarianoa: Txanpiak, kipula, piperrak eta olibak. Prezioa: 12.4 €</p>
+        <label for="begetarianoagehigarriak">Gehigarriak</label>
+        <select id="begetarianoagehigarriak" name="begetarianoagehigarriak">
+            <option value="0">Ez 
+            <option value="0.8">Gaztaia
+            <option value="0.8">Albahaka
+            <option value="1.4">Gaztaia eta albahaka
+        </select>
+        <label for="begetarianoazenbakia">Kantitatea:</label>
+        <input type="number" name="begetarianoazenbakia" id="begetarianoazenbakia" value="1">
+        <p>3. Pizza 4 Gaztai: Roquefort, parmesano, mozzarella eta cheddar. Prezioa: 12.4 €</p>
+        <label for="gaztaigehigarriak">Gehigarriak</label>
+        <select id="gaztaigehigarriak" name="gaztaigehigarriak">
+            <option value="0">Ez 
+            <option value="0.8">Gaztaia
+            <option value="0.8">Albahaka
+            <option value="1.4">Gaztaia eta albahaka
+        </select>
+        <label for="gaztaizenbakia">Kantitatea:</label>
+        <input type="number" name="gaztaizenbakia" id="gaztaizenbakia" value="1">
+        <p>4. Pizza Pernila eta Gaztaia. Prezioa: 12.4 €</p>
+        <label for="PernilaetaGaztaiagehigarriak">Gehigarriak</label>
+        <select id="PernilaetaGaztaiagehigarriak" name="PernilaetaGaztaiagehigarriak">
+            <option value="0">Ez 
+            <option value="0.8">Gaztaia
+            <option value="0.8">Albahaka
+            <option value="1.4">Gaztaia eta albahaka
+        </select>
+        <label for="PernilaetaGaztaiagehigarriakzenbakia">Kantitatea:</label>
+        <input type="number" name="PernilaetaGaztaiagehigarriakzenbakia" id="PernilaetaGaztaiagehigarriakzenbakia" value="1">
+    </fieldset>
+    <fieldset>
+        <legend><strong>Entregatzeko edo lokalean jasotzeko:</strong></legend>
+        <input type="checkbox" name="entregatzeko" id="entregatzeko">
+        <label for="gizonezkoa">Entregatzeko: 4.6€</label>
+        <p>Lokalean jasotzeko bada DOHAIN!</p>
+    </fieldset>
+    
+    <p>*Asteriskoa duten eremuak derrigorrezkoak dira</p>
+    
+    <button id="eskaeraegin" class="eskaeraegin" onclick="eskariaBurutu()">Eskaera egin</button>
+    <br>
+    <br>
+
+    <table border="1" id="taulaeskaerak">
+        <tr>
+            <td>Bezeroa</td>
+            <td>Eskaria</td>
+			<td>Kantitatea</td>
+            <td>Guztira (BEZ barne)</td>
+        </tr>
+    </table>
+    <footer>
+        <p><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">2024: Elorrieta Pizzak</p>
+    </footer>
+</body>
+</html>

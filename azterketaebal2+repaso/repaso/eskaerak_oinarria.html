@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="eu">
+  <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>Pizzeria Eskaera Orria</title>
+        <style>
+            *{	box-sizing:border-box;
+                font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+            }
+            header {
+              background-color: #ff6600;
+              color: #ffffff;
+              padding: 10px;
+              text-align: center;
+            }
+            footer {
+              background-color: #ff6600;
+              color: #ffffff;
+              padding: 10px;
+              text-align: center;
+            }
+            .d {
+              color: red;
+              font-weight: bold;
+            }  
+        </style>
+  </head>
+  <body>
+    <header><h1>Pizza eskaera orria</h1></header>
+   
+    <form name="pizzeria" id="pizzeria" method="" action="">
+      <fieldset>
+        <legend>Kontaktu datuak</legend>
+        <ul>
+          <li>
+            <label for="izena">Izena <span class="d">*</span></label>
+            <input type="text" id="izena" name="izena" required>
+        
+            <label for="abizena">Abizena <span class="d">*</span></label>
+            <input type="text" id="abizena" name="abizena" required>
+          </li>
+          <br>
+          <li>
+            <label for="eposta">e-Posta <span class="d">*</span></label>
+            <input type="email" id="eposta" name="eposta" required>
+        
+            <label for="tlfn">Telefonoa <span class="d">*</span></label>
+            <input type="text" id="tlfn" name="tlfn" required>
+          </li>
+          <br>
+          <li>
+            <label for="helb">Helbidea <span class="d">*</span></label>
+            <input type="text" id="helb" name="helb" required>
+        
+            <label for="postaK">PK <span class="d">*</span></label>
+            <select id="postaK" name="postaK" requiered>
+              <option value="48001">48001</option>
+              <option value="48002">48002</option>
+              <option value="48003">48003</option>
+              <option value="48004">48004</option>
+              <option value="48005">48005</option>
+              <option value="48006">48006</option>
+              <option value="48007">48007</option>
+              <option value="48008">48008</option>
+              <option value="48009">48009</option>
+              <option value="48010">48010</option>
+              <option value="48011">48011</option>
+              <option value="48012">48012</option>
+              <option value="48013">48013</option>
+              <option value="48014">48014</option>
+              <option value="48015">48015</option>
+            </select>
+                    
+          </li>
+        </ul>
+        </fieldset>
+
+      <fieldset>
+        <legend>Aukeratu pizzak</legend>
+        <!-- 1.pizza -->
+        <p>1. Pizza margarita: Tomate eta mozzarella. Prezioa: 9.9€</p>
+        <label for="gehigarriak1">Gehigarriak</label>
+        <select id="gehigarriak1">
+              <option value="9.9">Ez</option>
+              <option value="10.7">Gaztaia (+0.8€)</option>
+              <option value="10.7">Albahaka (+0.8€)</option>
+              <option value="11.3">Gaztaia eta Albahaka (+1.4€)</option>
+        </select>
+        <label for="kant1">Kantitatea</label>
+        <input type="number" name="kant1" id="kant1" min="0" value="0">
+
+          <!-- 2.pizza -->
+        <p>2. Pizza begetarianoa: Txanpiak, kipula, piperrak eta olibak. Prezioa: 12.4 €</p>
+        <label for="gehigarriak2">Gehigarriak</label>
+        <select id="gehigarriak2">
+            <option value="12.4">Ez</option>
+            <option value="13.2">Gaztaia (+0.8€)</option>
+            <option value="13.2">Albahaka (+0.8€)</option>
+            <option value="13.8">Gaztaia eta Albahaka (+1.4€)</option>
+          </select>
+        <label for="kant2">Kantitatea</label>
+        <input type="number" name="kant2" id="kant2" min="0" value="0">
+
+          <!-- 3.pizza -->
+        <p>3. Pizza 4 Gaztai: Roquefort, parmesano, mozzarella eta cheddar. Prezioa: 12.4 €</p>
+        <label for="gehigarriak3">Gehigarriak</label>
+        <select id="gehigarriak3">
+          <option value="12.4">Ez</option>
+          <option value="13.2">Gaztaia (+0.8€)</option>
+          <option value="13.2">Albahaka (+0.8€)</option>
+          <option value="13.8">Gaztaia eta Albahaka (+1.4€)</option>
+          </select>
+        <label for="kant3">Kantitatea</label>
+        <input type="number" name="kant3" id="kant3" min="0" value="0">
+
+          <!-- 4.pizza -->
+        <p>4. Pizza Pernila eta Gaztaia. Prezioa: 12.4 €</p>
+        <label for="gehigarriak4">Gehigarriak</label>
+        <select id="gehigarriak4">
+          <option value="12.4">Ez</option>
+          <option value="13.2">Gaztaia (+0.8€)</option>
+          <option value="13.2">Albahaka (+0.8€)</option>
+          <option value="13.8">Gaztaia eta Albahaka (+1.4€)</option>
+          </select>
+        <label for="kant4">Kantitatea</label>
+        <input type="number" name="kant4" id="kant4" min="0" value="0">
+      </fieldset>
+
+      <fieldset>
+        <legend>Entregatzeko edo lokalean jasotzeko</legend>
+        <input type="checkbox" name="entregatzeko" id="entregatzeko">
+        <label for="entregatzeko">Entregatzeko: 4.6€</label>
+        <p>Lokalean jasotzeko bada, DOHAIN!</p>
+      </fieldset>
+
+    <p><span class="d">*</span> Asteriskoa duten eremuak derrigorrezkoak dira</p>
+
+    <input type="button" value="Eskaera egin">
+    <br>
+
+  </form>
+
+
+  <footer>
+    <p><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">2024: Elorrieta Pizzak</p>
+  </footer>
+  <script>
+    function eskaerak(){
+
+    var tlf =document.getElementById("tlfn").value;
+    var entregatzeko = document
+    var tlf = document.getElementById("tlf").value;
+
+    var izena = document.getElementById("izena").value;
+    var abizena = document.getElementById("abizena").value;
+    var helbidea = document.getElementById("helbidea").value;
+    var telefonoa = document.getElementById("tel").value;
+    
+    var kantitate1 = document.getElementById("kantitate1").value;
+    var kantitate2 = document.getElementById("kantitate2").value;
+    var kantitate3 = document.getElementById("kantitate3").value;
+    var kantitate4 = document.getElementById("kantitate4").value;
+
+    var margaritaGehigarriak = document.getElementById("margaritagehigarriak").options[document.getElementById("margaritagehigarriak").selectedIndex].text;
+    var begetarianoGehigarriak = document.getElementById("begetarianoagehigarriak").options[document.getElementById("begetarianoagehigarriak").selectedIndex].text;
+    var gaztaiGehigarriak = document.getElementById("gaztaigehigarriak").options[document.getElementById("gaztaigehigarriak").selectedIndex].text;
+    var pernilaGaztaiGehigarriak = document.getElementById("PernilaetaGaztaiagehigarriak").options[document.getElementById("PernilaetaGaztaiagehigarriak").selectedIndex].text;
+
+
+    if (tlf.lenght = 9 || isNaN(tlf)){
+      window.alert("Telefonoa ez da zuzena.");
+      return;
+    }
+    if (pk < 48013 && entregatzeko.checked){
+      alert("Zonalde horretan ez dugu entregarik egiten");
+      return;
+    }
+    if (kantitate1 + kantitate2 + kantitate3 + kantitate4 == 0){
+      alert("Ez da pizzarik aukeratu.")
+    }
+    let guztira = 0;
+    guztira = gehi1 + kantitate1 + gehi2 + kantitate2 + gehi3 + kantitate3 + gehi4 + kantitate4;
+    if (entregatzeko.checked){
+      gustira += 4.6;
+    }
+    let guztiraBEZ = 0;
+    gustiraBEZ = gustira * 1.1;
+
+    var eskaria = "";
+    if (kantitate1 > 0) {
+    eskaria += " Pizza Margarita (Gehigarria" + gehi1txt + "), ";
+    }
+    if (kantitate2 > 0) {
+    eskaria += begetarianoKopurua + " Pizza Begetarianoa (Gehigarria" + gehi2txt + "), ";
+    }
+    if (kantitate3 > 0) {
+    eskaria += gaztaiKopurua + " Pizza 4 Gaztai (Gehigarria" + gehi3txt + "), ";
+    }
+    if (kantitate4 > 0) {
+    eskaria += pernilaGaztaiKopurua + " Pizza Pernila eta Gaztaia (Gehigarria" + gehi4txt + "), ";
+    }
+
+    let taula = document.getElementById("Taula");
+
+    if (taula){
+      taula.innerHTML = ""
+    }
+    else{
+    taula = document.createElement("table");
+    document.body.appendChild(taula);
+    taula.setAttribute("Id", "taula");
+    }
+    let lerro = taula.insertrow
+  }
+
+  </script>
+  </body>
+</html>
