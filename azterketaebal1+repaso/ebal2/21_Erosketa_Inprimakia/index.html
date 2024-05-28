@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erosketak</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <form name="erosketa">
+        <fieldset>
+            <legend>Kostea kalkulatu</legend>
+            <table>
+                <caption>Produktuak eta prezioak</caption>
+                <thead>
+                    <tr>
+                        <th>Produktua</th>
+                        <th>Prezioa/Kg.</th>
+                        <th>Hautatu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Laranjak</td>
+                        <td>0.75</td>
+                        <td><input type="radio" name="frutak" id="laranja" value="0.75"></td>
+                    </tr>
+                    <tr>
+                        <td>Madariak</td>
+                        <td>1.50</td>
+                        <td><input type="radio" name="frutak" id="madaria" value="1.50"></td>
+                    </tr>                    
+                    <tr>
+                        <td>Platanoak</td>
+                        <td>2.25</td>
+                        <td><input type="radio" name="frutak" id="platanoa" value="2.25"></td>
+                    </tr>
+                </tbody>
+            </table><br>
+            <label for="kant">Kantitatea</label>
+            <input type="number" id="kant" name="kant">
+            <br><br>
+            <label for="ordainketa">Ordainketa Metodoa</label>
+            <select id="ordainketa" name="metodoa">
+                <option id="dirua" value="dirua" name="metodoa">Dirua</option>
+                <option id="hile1" value="hile1" name="metodoa">Hile1</option>
+                <option id="hile3" value="hile3" name="metodoa">Hile3</option>
+            </select>
+            <label for="garraio">Garraioa</label>
+            <input type="checkbox" id="garraio" name="garraio">
+        </fieldset>
+        <br>
+        <input type="button" value="Kostea kalkulatu" onclick="kalkulatu()">
+    </form>   
+    <script src="kodea.js"></script> 
+</body>
+</html>

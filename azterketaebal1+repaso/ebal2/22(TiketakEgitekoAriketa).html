@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erosketak</title>
+</head>
+<body>
+  <h3>Bigarren eskuko erropa denda: kobratze kutxa</h3>
+  <form name="erropadenda" id="erropadenda">
+	  <label for="zbkia">Erosketa Zbkia: </label>
+	  <input type="text" name="zbkia" id="zbkia" value="1" disabled>
+	  <br>
+	  <label for="bez">BEZ: % </label>
+	  <input type="number" id="bez" name="bez" value="21" readonly>
+	  <br>
+	  <label for="produktua">Produktua: </label>
+	  <select id="produktua" name="produktua">
+	    <option value="15.3">Gona</option>
+	    <option value="10.2">Prakak</option>
+	    <option value="5.45">Kamiseta</option>
+	    <option value="20.9">Jaka</option>
+	    <option value="5.4">Lepokoa</option>
+	    <option value="25.8">Zapatak</option>
+	    <option value="35.3">Berokia</option>
+	    <option value="15.2">Aterkia</option>
+	  </select>
+	  <label for="kopurua">Kopurua: </label>
+	  <input type="number" id="kopurua" name="kopurua" value="1">
+	  <br>
+	  <input type="button" value="Gorde" onclick="gorde()">
+	  <br>
+	  <label>Tiketa:</label>
+	  <br>
+	  <textarea id="tiketa" cols="100" rows="10" placeholder="Gordetako erosketak" disabled></textarea>
+	  <br>
+	  <input type="button" value="Sortu Faktura" onclick="faktura()">
+  </form>
+  <script src="22.js"></script>
+</body>
+</html>

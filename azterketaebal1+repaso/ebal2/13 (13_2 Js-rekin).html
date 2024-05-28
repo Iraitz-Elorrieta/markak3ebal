@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="formularioa">
+        <label for="izena">Izena</label>
+        <input name="izena" id="izena" type="text" onchange="f()">
+        <label for="aldaketak">Aldaketa kopurua</label>
+        <input name="aldaketak" id="aldaketak" type="number">
+    </form>
+    <script>
+        function f(){
+            document.getElementById("aldaketak").value++;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Zirkunferentzia / Zirkulua</h1>
+
+    <form>
+        <label for="R">R=</label>
+        <input type="number" name="R" id="R">
+        <br><br>
+        <input type="radio" name="aukera" checked>Perimetroa
+        <input type="radio" name="aukera">Azalera
+        <br><br>
+        <input type="button" value="emaitza" onclick="fR()">
+        <input type="text" id="res" name="res" disabled>
+    </form>
+    <script>
+            function fR(){
+                let zbk = document.getElementById("R").value;
+                let auk = document.getElementsByName("aukera");
+                console.log(auk)
+                if (auk[0].checked){
+                    document.getElementById("res").value = 2*Math.PI*zbk;
+                }else{
+                    document.getElementById("res").value = Math.PI*zbk*zbk;
+                }
+            }
+
+    </script>
+</body>
+</html>

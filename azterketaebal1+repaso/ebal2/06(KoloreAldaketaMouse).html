@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem sint cumque provident pariatur adipisci dolore, soluta deserunt consequuntur assumenda commodi sed, repellendus illo sapiente asperiores velit. Molestiae excepturi voluptate eos.</p>
+
+    <p onmouseover="f(this,'red')" onmouseout="f(this,'black')">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem sint cumque provident pariatur adipisci dolore, soluta deserunt consequuntur assumenda commodi sed, repellendus illo sapiente asperiores velit. Molestiae excepturi voluptate eos.</p>
+
+    <script>
+
+        function f(elementua, kolore){
+            elementua.style.color = kolore;
+        }
+    </script>
+</body>
+</html>

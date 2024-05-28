@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html> 
+<head>  
+	<title>DOM Egiturak</title>  
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>   
+<body> 
+
+    <button onclick="f1()">Klikatu botoia web orria zein den aztertzeko</button>
+    <br>
+    <button onclick="f2()">Ireki Berria.eus</button>
+    <br>
+    <button onclick="f3()">Itxi leihoa</button>
+
+	<script>   
+        function f1(){
+            window.alert(window.location);
+        }
+
+        function f2(){
+            //window.open("https://www.berria.eus/");
+            window.location.href = "https://www.berria.eus/";
+        }
+
+        function f3(){
+            window.close();
+        }
+	
+	</script> 
+</body> 
+</html>

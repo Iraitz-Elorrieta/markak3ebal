@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="paragrafoa"> bla bla bla bla bla</p>
+    <button onclick="document.getElementById('paragrafoa').style.visibility = 'hidden';">Testua izkutatu</button>
+    <button onclick="erakutsi()">Testua erakutsi</button>
+    <script>
+        function izkutatu(){
+            document.getElementById("paragrafoa").style.visibility = "hidden";
+        }
+
+        function erakutsi(){
+            document.getElementById("paragrafoa").style.visibility = "visible";
+
+        }
+
+    </script>
+</body>
+</html>

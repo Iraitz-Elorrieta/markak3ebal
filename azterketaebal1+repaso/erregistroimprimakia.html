@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="eu">
+    <head>
+    <title>Erregistro Imprimakia</title>
+    <meta charset="UTF-8">
+    <meta content="author" content="Iraitz-Corcuera">
+    <meta content="keywords" content="erregistro imprimakia">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    </head>
+    <form name="ErregistroImprimakia" action="#.php" method="get"></form>
+    <fieldset>
+        <legend>Erabiltzaile datuak</legend>
+        <label for="Email">e-posta:</label>
+        <input type="email" name="email" id="email" placeholder="e-posta" autocomplete="on">
+        <label for="Email">Errepikatu e-posta:</label>
+        <input type="email" name="email" id="email" placeholder="e-posta" autocomplete="off">
+        <br>
+        <br>
+        <label for="Password">Pasahitza:</label>
+        <input type="password" name="password" id="password" placeholder="pasahitza" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;,.?~\\/-]).{8,40}">
+        <label for="Password">Errepikatu Pasahitza:</label>
+        <input type="password" name="password" id="password" placeholder="pasahitza" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;,.?~\\/-]).{8,40}">
+        <br>
+        <br>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Datu pertsonalak</legend>
+        <label for="fullname">Izena:</label>
+        <input type="text" name="fullname" id="fullname" pattern="{1,40}">
+        <br>
+        <br>
+        <label for="jaiotzedata">Jaiotze-data:</label>
+        <input type="date" name="date" id="date" max="2200-12-31" min="1900-01-01">
+        <br>
+        <br>
+        <label for="generoa">Generoa:</label>
+                    <input type="radio" name="generoa" id="gizonezkoa">
+                    <label for="gizonezkoa">Gizonezkoa</label>
+
+                    <input type="radio" name="generoa" id="emakumezkoa">
+                    <label for="emakumezkoa">Emakumezkoa</label>
+                
+                    <input type="radio" name="generoa" id="ezbitarra">
+                    <label for="ezbitarra">Ez bitarra</label>
+        <br>
+        <br>
+        <label for="telefonoa">Telefonoa:</label>
+        <input type="tel" name="tel" id="tel" pattern="[0-9]{9}">
+        <br>
+        <br>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Ikasketak/Lana</legend>
+        <form>
+            <label for="ikasketak">Ikasketak:</label>
+            <select>
+                <option></option>  <!--ez dakit ondo badagoen, hasieran garbirik ikusteko-->
+                <option>Ikasketak1</option>
+                <option>Ikasketak2</option>
+                <option>Ikasketak3</option>
+            </select>
+        </form>
+        <br>
+        <br>
+        <label for="hizkuntza">Hizkuntza:</label>
+                    <select multiple size="3" name="hizkuntza" id="hizkuntza">
+                    <option value="euskera">Euskera</option>
+                    <option value="ingelesa">Ingelesa</option>
+                    <option value="gaztelania">Gaztelania</option>
+                    </select>
+        <br>
+        <br>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <label for="fitxategi">CV atxikitu:</label><br>
+            <input type="file" name="fitxategi" id="fitxategi" accept=".pdf, .doc, .docx" required>
+        </form>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Beste batzuk</legend>
+        <label for="zenbakia">Gustukoen duzuen zenbakia:</label>
+        <input type="number" name="number" id="number" required>
+        <br>
+        <br>
+        <form>
+            <label for="kolorea">Gustukoen duzun kolorea:</label>
+            <input type="color" id="color" name="color" value="#fffff">
+        </form>
+        <br>
+        <label for="area">Libre sentitu nahi duzuna gehitzeko:</label><br>
+                    <textarea for="area" id="area" cols="75" rows="10" placeholder="Nahi duzuna idatzi" pattern="{0,100}"></textarea>
+    </fieldset>
+    <br>
+    <button type="reset">Datuak garbitu</button>
+    <button type="submit">Datuak bidali</button>
+    </form>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="zbk">Zenbakia:</label>
+        <input type="number" id="zbk" name="zbk">
+        <br>
+        <br>
+        <input type="button" value="Biderketa" onclick="fBider()">
+        <input type="button" value="Zatiketa">
+        <br>
+        <br>
+        <textarea id="emaitza" cols="20" rows="10"></textarea>
+    </form>
+    <script>
+        function fBider(){
+            let z = document.getElementById("zbk").value;
+
+            for (let i=1; i<=10;i++){
+                    document.getElementById("emaitza").value += z +" x " + i + " = " + (z*i) + "\n";
+            }
+
+        }
+    </script>
+</body>
+</html>

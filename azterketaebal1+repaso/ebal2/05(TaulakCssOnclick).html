@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Lantzen</title>
+</head>
+<body>
+
+<table style="border:1px solid black" id="nireTaula">
+  <tr>
+    <td>100</td>
+    <td>200</td>
+  </tr>
+  <tr>
+    <td>300</td>
+    <td>400</td>
+  </tr>
+</table>
+<br/><br/>
+
+<button onclick="f1()">Aldatu ertza</button> <br/><br/>
+<button onclick="f2()">Aldatu padding</button> <br/><br/>
+<button onclick="f3()">1. Gelaxkaren balioa</button> <br/><br/>
+<button onclick="f4()">Izenburua sortu</button> <br/><br/>
+
+<script>
+
+function f1(){
+  document.getElementById("nireTaula").style.border = "5px solid black";
+}
+
+function f2(){
+  document.getElementById("nireTaula").style.padding = "15px";
+}
+
+function f3(){
+  window.alert("1.gelaxkaren balioa da: " + document.getElementById("nireTaula").rows[0].cells[0].innerHTML);
+}
+
+function f4(){
+  document.getElementById("nireTaula").createCaption().innerHTML = "Izenburua";
+}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Elementuak gehitu</title>
+</head>
+<body>
+<ul id="lista">
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Consectetuer adipiscing elit</li>
+  <li>Sed mattis enim vitae orci</li>
+  <li>Phasellus libero</li>
+  <li>Maecenas nisl arcu</li>
+</ul>
+<input type="button" value="Elementua gehitu bukaeran" onclick="gehituB();">
+<input type="button" value="Elementua gehitu hasieran" onclick="gehituH();">
+<input type="button" value="Ezabatu azken elementua" onclick="kendu();">
+<script>
+    function gehituB(){
+        let liElem = document.createElement("li");
+        let testuElem = document.createTextNode("Testu berria");
+        liElem.appendChild(testuElem);
+        document.getElementById("lista").appendChild(liElem);
+    }
+
+    function gehituH(){
+        let liElem = document.createElement("li");
+        let testuElem = document.createTextNode("Testu berria");
+        liElem.appendChild(testuElem);
+        document.getElementById("lista").insertBefore(liElem, firstChild);
+        //        document.getElementById("lista").insertBefore(liElem, document.getElementById("lista").childNode[1]);
+
+    }
+    function kendu(){
+        document.getElementById("lista").removeChild(document.getElementById("lista").lastChild);
+    }
+
+</script>
+
+
+</body>
+</html>

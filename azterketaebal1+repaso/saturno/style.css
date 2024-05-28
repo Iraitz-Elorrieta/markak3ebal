@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+header {
+    text-align: center;
+    border-bottom: 1px solid black; 
+    padding-bottom: 10px; 
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav {
+    background-color: rgb(120, 163, 255);
+    width: 200px;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    margin-bottom: 20px;
+}
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+nav :hover{
+    color: black;
+}
+
+#nagusia {
+    padding: 20px;
+}
+
+footer {
+    background-color: gray;
+}
+
+#container {
+    flex-grow: 1;
+}
+

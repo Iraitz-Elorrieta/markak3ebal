@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Taula dinamikoa</caption>
+        <thead>
+            <tr>
+                <th>Zutabe1</th>
+                <th>Zutabe2</th>
+                <th>Zutabe3</th>
+            </tr>
+        </thead>
+    </table>
+    <button onclick="gehitu()">Gehitu lerroak</button> 
+    <button onclick="ezabatu()">Ezabatu lerroak</button> 
+    <script>
+        function gehitu(){
+            let taula = document.getElementsByTagName("table")[0]   
+            if (taula.tBodies[0]){
+            }else{
+                taula.createTBody();
+            }
+            let bodya = taula.tBodies[0];
+            let lerroa = bodya.insertRow();
+            let gelaxka1 = lerroa.insertCell();
+            gelaxka1.innerHTML = "z1";
+            let gelaxka2 = lerroa.insertCell();
+            gelaxka2.innerHTML = "z2";
+            let gelaxka3 = lerroa.insertCell();
+            gelaxka3.innerHTML = "z3";
+        
+
+        }
+        function ezabatu(){
+            let taula = document.getElementsByTagName("table")[0]
+            let bodya = taula.tBodies[0];
+            bodya.deleteRow(bodya.rows.length - 1 );
+        }
+    </script>  
+</body>
+</html>

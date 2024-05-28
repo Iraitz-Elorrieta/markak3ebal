@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="formularioa" action="action.php" 
+    onsubmit="window.alert('Zure datuak bidali dira')" 
+    onreset="window.alert('Datu berriak idatzi ahal dituzu')">
+        <label for="fname">Idatzi zure izena:</label><br>
+        <input type="text" name="fname" id="fname" value="Ane" onfocus="f1()" onblur="f1a()">
+        <br><br>
+      
+        <label for="lname">Idatzi zure abizena:</label><br>
+        <input type="text" name="lname" id="lname" onfocus="f2(this)" onblur="f2a(this)"><br><br>
+      
+        <label for="lherria">Bizilekua:</label><br>
+        <input type="text" name="lherria" id="lherria" value="Bizkaia" onselect="f3()"><br>
+      
+        <label for="ltestua">Idatzi mezu bat:</label>
+        <input  type="text" name="ltestua" id="ltestua" onkeydown="f4('yellow')" onkeyup="f4('white')"><br><br>
+      
+      
+        <input type="submit" value="BIDALI">
+        <input type="reset" value="GARBITU">
+      </form>
+
+      <script>
+            //sarrerako testua letra larri bihurtzen duen funtzioa
+            function f1() {
+                document.getElementById("fname").value = document.getElementById("fname").value.toUpperCase();
+            }
+            function f1a(){
+                document.getElementById("fname").value = document.getElementById("fname").value.toLowerCase();
+            }
+            function f2(x) {
+                    x.style.background = "LimeGreen";
+            }
+            function f2a(x) {
+                    x.style.removeProperty("background");
+            }
+            function f3() {
+                window.alert("Kontuz, ez da Bizkaia?");
+            }
+            function f4(color) {
+                document.getElementById("ltestua").style.background = color;
+            }
+
+
+      </script>
+      
+</body>
+</html>

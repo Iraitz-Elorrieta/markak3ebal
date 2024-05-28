@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="eu">
+    <head>
+    <title>Saturnora Bidaia</title>
+    <meta charset="UTF-8">
+    <meta content="author" content="Iraitz-Corcuera">
+    <meta content="keywords" content="bidaia Saturno Trans Planet">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Trans Planet Airlines</h1>
+            <img src="https://www.vippng.com/png/full/548-5483891_saturno-los-anillos-de-saturno-planeta-universo-transparent.png"
+            alt="Saturno"/>
+        </header>
+        <div id="container">
+            <nav>
+                <ul>
+                    <li><a href="#  ">Hasiera</a></li>
+                    <li><a href="#">Promozioak</a></li>
+                    <li><a href="#">Kontaktua</a></li>
+                </ul>
+            </nav>
+            <div id="nagusia">
+                <h3>Saturnora bidaia irabazi!</h3>
+                <p>Presta zaitez Saturnoren eraztunak patinatzeko!
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum. </p>
+                <h4>Lehiaketan izena emateko inprimakia:</h4>
+                <form name="Saturform" action="#.php" method="get">
+                <!--Izen Abizenak TEXT-->
+                    <label for="fullname">Izen abizenak</label><br>
+                    <input type="text" name="fullname" id="fullname" placeholder="Izena"><br>
+                <!--Emaila EMAIL --><br>
+                    <label for="Email">Emaila</label><br>
+                    <input type="email" name="email" id="email" placeholder="adibide@gmail.com"><br><br>
+                <!--Jaiotze data DATE -->
+                    <label for="jaiotzedata">Jaiotze data</label><br>
+                    <input type="date" name="date" id="date" max="2005-12-31" min="1900-01-01"><br>
+                <!--Desplegable--><br>
+                    <label for="desp">Gehigarriak</label><br><br>
+                    <details>
+                <!--Checkbox--><br>
+                    <label for="planetak">Zein planeta bisitaztu duzu</label><br>
+                    <input type="checkbox" name="planetak" id="artizarra">
+                    <label for="artizarra">artizarra</label><br>
+
+                    <input type="checkbox" name="planetak" id="marte">
+                    <label for="marte">marte</label><br>
+                
+                    <input type="checkbox" name="planetak" id="jupiter">
+                    <label for="jupiter">jupiter</label><br>
+
+                    <input type="checkbox" name="planetak" id="neptuno">
+                    <label for="neptuno">neptuno</label><br>
+
+                <!--botoiak--><br>
+                    <label for="saturno_ezaugarriak">Zerk erakartzen zaitu gehien Saturnon</label><br>
+                    <select multiple size="1" name="saturno_ezaugarriak" id="saturno_ezaugarriak">
+                    <option value="koloreak">Bere koloreak</option>
+                    <option value="tamaina">Bere tamaina</option>
+                    <option value="eraztunak">Eraztunak</option>
+                    </select><br>
+                <!--Testu luzea TEXTAREA--><br>
+                    <label for="area">Aurkeztu zure burua 100 hitzetan:</label><br>
+                    <textarea for="area" id="area" cols="100" rows="10"></textarea>
+
+                <!--botoiak--><br>
+                    <input type="submit" name="datuak_bidali" id="datuak_bidali" value="Bidali">
+                    <button type="submit" name="datuak_bidali">Bidali</button>
+                </details>
+            </form>
+            </div>
+        </div>
+        <footer>
+                <p>Saturno Bidaiak</p>
+        </footer>
+    </body>
+</html>

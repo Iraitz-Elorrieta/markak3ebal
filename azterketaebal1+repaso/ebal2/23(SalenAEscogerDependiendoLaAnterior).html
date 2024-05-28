@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form name="f1"> 
+        <label for="herrialde">Herrialdea</label>
+        <select id="herrialde" name="herrialde" onchange="aldatu_herri()"> 
+            <option value="0" selected>Seleccione... 
+            <option value="1">Araba 
+            <option value="2">Bizkaia 
+            <option value="3">Gipuzkoa 
+            <option value="4">Lapurdi  
+        </select>
+        <br>
+        <br>
+        <label for="herri">Herria</label>
+        <select id="herri" name="herri"> 
+            <option value="-">- 
+        </select> 
+    </form>
+    <script>
+        var herrialde_1=new Array("-","Amurrio","Añana","Aramaio","Artzeniega","Arraia-Maeztu","...") ;
+        var herrialde_2=new Array("-","Abadiño","Abanto-Zierbena	","Ajangiz","Alonsotegi	","Amoroto","Arakaldo","..."); 
+        var herrialde_3=new Array("-","Abaltzisketa","Aduna","Aizarnazabal","Albiztur","...") ;
+        var herrialde_4=new Array("-","Ahetze","Ainhoa","Angelu","Arbona","Arrangoitze","...");
+
+        var herrialdeak= [
+                [],
+                herrialde_1,
+                herrialde_2,
+                herrialde_3,
+                herrialde_4,  
+            ];
+
+        function aldatu_herri(){
+            let herriID = document.getElementById("herrialde").value;
+            if (herriID != 0){
+                let herriak = herrialdeak[herriID];
+                let herri_zerrenda = document.getElementById("herri");
+
+                for (let j=herri_zerrenda.length; j>0; j--){
+                    herri_zerrenda.remove(j);
+                }
+
+
+                for (let i = 0; i<herriak.length; i++){
+
+                    let aukera = document.createElement("option");
+                    let testua = document.createTextNode(herriak[i]);
+                    aukera.appendChild(testua);
+                    herri_zerrenda.appendChild(aukera);
+                }
+            }
+
+        }
+
+    </script>        
+</body>
+</html>
