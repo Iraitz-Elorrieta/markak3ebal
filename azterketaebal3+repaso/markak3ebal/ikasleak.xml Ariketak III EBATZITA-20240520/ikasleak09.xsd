@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!--Datu moten definizioa-->
+<xs:simpleType name="max50">
+	<xs:restriction base="xs:string">
+		<xs:maxLength value="50" />
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="max100"> 
+	<xs:restriction base="xs:string">
+		<xs:maxLength value="100" />
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="telefono9">
+	<xs:restriction base="xs:integer">
+		<xs:totalDigits value="9" />
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="motaNAN">
+	<xs:restriction base="xs:string">
+		<xs:pattern value="\d{8}[A-Z]" />
+	</xs:restriction>
+</xs:simpleType>
+<xs:complexType name="helbideaDatua">
+    <xs:sequence>
+        <xs:element name="kalea">
+            <xs:complexType>
+				<xs:simpleContent>
+					<xs:extension base="max100">
+						<xs:attribute name="mota" type="xs:string" />
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+        </xs:element>
+        <xs:element name="zbk">
+            <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="1"></xs:minInclusive>
+                    <xs:maxInclusive value="1000"></xs:maxInclusive>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+        <xs:element name="herria">
+            <xs:complexType>
+				<xs:simpleContent>
+					<xs:extension base="max50">
+						<xs:attribute name="pk" type="xs:integer" />
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+        </xs:element>
+        <xs:element name="probintzia" type="max50"></xs:element>
+        <xs:element name="egiaztatuta" minOccurs="0"><!-- definizio berria -->
+			<xs:complexType />
+		</xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+
+
+    <xs:element name="ikasleak">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ikaslea" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        
+                        <xs:element name="izena" type="xs:string"></xs:element>
+                        <xs:element name="helbidea" type="helbideaDatua"></xs:element>
+                        <xs:choice>
+                            <xs:element name="telefonoa" type="telefono9"></xs:element>
+                            <xs:element name="mugikorra" type="telefono9" maxOccurs="3"></xs:element>
+                        </xs:choice>                            
+                        <xs:element name="eposta" type="xs:string"></xs:element>
+                        <xs:element name="elbarritasuna" minOccurs="0">
+                            <xs:complexType>
+                                <xs:attribute name="gradua" use="required">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:pattern value="\d{2}%"></xs:pattern>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="nan" type="motaNAN" use="required"></xs:attribute>
+                    <xs:attribute name="errepikatzailea" type="xs:boolean" default="false"></xs:attribute>
+                    <xs:attribute name="jaiotzaData" type="xs:date" use="required"></xs:attribute>
+                </xs:complexType>   
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>   
+    </xs:element>    
+</xs:schema>

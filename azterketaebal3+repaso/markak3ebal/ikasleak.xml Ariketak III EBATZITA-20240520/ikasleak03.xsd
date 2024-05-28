@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="ikasleak">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ikaslea" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nan" type="xs:integer"></xs:element>
+                        <xs:element name="izena" type="xs:string"></xs:element>
+                        <xs:element name="helbidea">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="kalea" type="xs:string"></xs:element>
+                                    <xs:element name="zbk" type="xs:integer"></xs:element>
+                                    <xs:element name="herria" type="xs:string"></xs:element>
+                                    <xs:element name="probintzia" type="xs:string"></xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="telefonoa" type="xs:integer" maxOccurs="2"></xs:element>
+                        <xs:element name="eposta" type="xs:string" minOccurs="0"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>   
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>   
+    </xs:element>    
+</xs:schema>
