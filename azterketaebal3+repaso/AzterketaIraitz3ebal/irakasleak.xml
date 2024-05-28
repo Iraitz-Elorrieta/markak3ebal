@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<irakasleak
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="irakasleak.xsd">
+
+	<irakaslea nan="12345678-X">
+		<izena>Begoña Zurimendi</izena>
+		<modulua>PGR</modulua>
+		<modulua>PSP</modulua>
+		<antzinetasuna
+			lehenIkastetxea="Elorrieta-Errekamari LHII">2005-09-01</antzinetasuna>
+		<tutorea kurtsoa="1" />
+	</irakaslea>
+	<irakaslea nan="23456789-A">
+		<izena>Jone Garatea</izena>
+		<modulua>GBD</modulua>
+		<modulua>ABD</modulua>
+		<antzinetasuna>2010-09-01</antzinetasuna>
+		<mintegiBurua />
+	</irakaslea>
+	<irakaslea nan="77788899-Z">
+		<izena>Isabel Azkunaga</izena>
+		<modulua>EDE</modulua>
+		<modulua>PSP</modulua>
+	</irakaslea>
+	<irakaslea nan="22255512-T">
+		<izena>Luke Gainza</izena>
+		<modulua>LMS</modulua>
+		<modulua>GBD</modulua>
+		<tutorea kurtsoa="1" />
+	</irakaslea>
+	<irakaslea nan="45678912-P">
+		<izena>Andoni Egileor</izena>
+		<modulua>SIS</modulua>
+		<modulua>SGE</modulua>
+		<modulua>DIN</modulua>
+		<tutorea kurtsoa="2" />
+	</irakaslea>
+	<irakaslea nan="44455555-N">
+		<izena>Oier Aranguren</izena>
+		<modulua>PRG</modulua>
+		<modulua>FCT</modulua>
+		<modulua>EDE</modulua>
+	</irakaslea>
+</irakasleak>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pentsioa izena="Hostal Jan eta lo">
+	<logelak>
+		<logela kodea="00H1">
+			<izena>Bella durmiente</izena>
+			<gehienezkoOkupazioa>2</gehienezkoOkupazioa>
+			<prezioa>
+				<altua>229.99</altua>
+				<bajua>199.99</bajua>	
+			</prezioa>
+		</logela>
+		<logela kodea="00S1">
+			<izena>Suite Real</izena>
+			<gehienezkoOkupazioa>4</gehienezkoOkupazioa>
+			<prezioa>
+				<altua>439.99</altua>
+				<bajua>399.99</bajua>	
+			</prezioa>
+		</logela>
+		<logela kodea="00S2">
+			<izena>Gran Suite DELUXE</izena>
+			<gehienezkoOkupazioa>4</gehienezkoOkupazioa>
+			<prezioa>
+				<altua>579.99</altua>
+				<bajua>501.99</bajua>	
+			</prezioa>
+		</logela>
+	</logelak>
+	<bezeroak>
+		<bezeroa>
+			<izena nan="11111111H">Mikel Gartzia</izena>
+			<logela>00H1</logela>
+			<hasieradata>2016-12-12</hasieradata>
+			<egonaldia>5</egonaldia>
+		</bezeroa>
+		<bezeroa>
+			<izena nan="52525252L">Ana Mendia</izena>
+			<logela>00S2</logela>
+			<hasieradata>2016-12-12</hasieradata>
+			<egonaldia>2</egonaldia>
+		</bezeroa>
+		<bezeroa>
+			<izena nan="45678912K">Joseba Alkorta</izena>
+			<logela>00S1</logela>
+			<hasieradata>2016-12-13</hasieradata>
+			<egonaldia>9</egonaldia>
+		</bezeroa>
+		<bezeroa>
+			<izena nan="11223344P">Jasone Agirre</izena>
+			<logela>00S2</logela>
+			<hasieradata>2016-12-18</hasieradata>
+			<egonaldia>5</egonaldia>
+		</bezeroa>
+		<bezeroa>
+			<izena nan="32132145K">Julen Abad</izena>
+			<logela>00S1</logela>
+			<hasieradata>2016-12-23</hasieradata>
+			<egonaldia>6</egonaldia>
+		</bezeroa>
+		<bezeroa>
+			<izena nan="88888888Z">Patricia Calvo</izena>
+			<logela>00S2</logela>
+			<hasieradata>2016-12-27</hasieradata>
+			<egonaldia>3</egonaldia>
+		</bezeroa>
+	</bezeroak>
+</pentsioa>
+
+<!--1. a) <izena>Bella durmiente
+	XPATH=  
+	2. b) <prezioak>
+			<altua>229.99</altua>
+			<bajua>199.99</bajua>
+	XPATH= 
+-->
