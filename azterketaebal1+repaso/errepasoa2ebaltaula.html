@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eskuraerako Formularioa</title>
+    <style>
+        #erosi-botoia {
+            display: none;
+        }
+
+        #emaitza {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Eskuraerako Formularioa</h2>
+    <form id="eskura-form" action="#" method="POST">
+        <div>
+            <label for="izen-abizena">Izena Abizena:</label>
+            <input type="text" id="izen-abizena" name="izen-abizena" required>
+        </div>
+        <div>
+            <label for="emaila">Emaila:</label>
+            <input type="email" id="emaila" name="emaila" placeholder="posta@emaila.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+        </div>
+        <div>
+            <label for="telefono-zenbakia">Telefono Zenbakia:</label>
+            <input type="tel" id="telefono-zenbakia" name="telefono-zenbakia" required>
+        </div>
+        <div>
+            <label for="jaiotze-data">Jaiotze Data:</label>
+            <input type="date" id="jaiotze-data" name="jaiotze-data" required>
+        </div>
+        <div>
+            <label for="NAN-zenbakia">NAN Zenbakia:</label>
+            <input type="text" id="NAN-zenbakia" name="NAN-zenbakia" required>
+        </div>
+        <div>
+            <label for="sarrera">Sarrera Eskuragarriak:</label>
+            <select id="sarrera" name="sarrera" required>
+                <option value="28" id="Sen Senra">Sen Senra (28€)</option>
+                <option value="18" id="Chill Mafia">Chill Mafia (18€)</option>
+                <option value="15" id="Merina Gris">Merina Gris (15€)</option>
+            </select>
+        </div>
+        <div>
+            <label for="kantitatea">Kantitatea:</label>
+            <input type="number" id="kantitatea" name="kantitatea" min="1" value="1" required>
+        </div>
+        <button type="button" onclick="erosi()">Erosi</button>
+    </form>
+
+    <div id="emaitza">
+        <h3>Erosketaren Emaitza:</h3>
+        <table border="1" id="emaitza-taula">
+            <thead>
+                <tr>
+                    <th>Izena Abizena</th>
+                    <th>Emaila</th>
+                    <th>Telefono Zenbakia</th>
+                    <th>Jaiotze Data</th>
+                    <th>NAN Zenbakia</th>
+                    <th>Eskuragarriak</th>
+                    <th>Kantitatea</th>
+                    <th>Prezioa</th>
+                </tr>
+            </thead>
+            <tbody id="emaitza-gorputza">
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+function erosi() {
+    let izenaAbizena = document.getElementById("izen-abizena").value;
+    let emaila = document.getElementById("emaila").value;
+    let telefonoZenbakia = document.getElementById("telefono-zenbakia").value;
+    let jaiotzeData = document.getElementById("jaiotze-data").value;
+    let nanZenbakia = document.getElementById("NAN-zenbakia").value;
+    let sarrera = document.getElementById("sarrera").value;
+    let kantitatea = document.getElementById("kantitatea").value;
+
+    if (izenaAbizena && emaila && telefonoZenbakia && jaiotzeData && nanZenbakia && sarrera && kantitatea > 0) {
+        let emaitza1 = document.getElementById("emaitza-1");
+        let emaitzaTaula = document.getElementById("emaitza-taula");
+        let emaitzaGorputza = document.getElementById("emaitza-gorputza");
+        let eskuragarriakElementua = document.getElementById(document.querySelector("#sarrera option:checked").id);
+        let eskuragarriak = eskuragarriakElementua ? eskuragarriakElementua.textContent : null;
+        let prezioa = parseInt(sarrera, 10) * parseInt(kantitatea, 10);
+
+        if (eskuragarriak !== null && !isNaN(prezioa)) {
+            let row = emaitzaGorputza.insertRow();
+            row.insertCell(0).textContent = izenaAbizena;
+            row.insertCell(1).textContent = emaila;
+            row.insertCell(2).textContent = telefonoZenbakia;
+            row.insertCell(3).textContent = jaiotzeData;
+            row.insertCell(4).textContent = nanZenbakia;
+            row.insertCell(5).textContent = eskuragarriak;
+            row.insertCell(6).textContent = kantitatea;
+            row.insertCell(7).textContent = prezioa + "€";
+
+            emaitza1.style.display = "none";
+            emaitzaTaula.style.display = "table";
+        } else {
+            console.error("Zerbait falta da:");
+        }
+    } else {
+        alert("Mesedez, formulario guztiak bete.");
+    }
+}
+    </script>
+</body>
+</html>
